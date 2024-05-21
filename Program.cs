@@ -1,7 +1,9 @@
-﻿
-string [] SeparationString (string symbol)
+﻿string[] SeparationString(string symbolFromConsole)
 {
-    string [] SymbolArray = new string [symbol.Length];
-    SymbolArray = symbol.Split(",");
+    string[] SymbolArray = new string[symbolFromConsole.Length];
+    SymbolArray = symbolFromConsole.Split(",");
     return SymbolArray
 }
+
+Console.Write("Введите символы, разделенные запятой: "); 
+string symbolFromConsole = Console.ReadLine();
