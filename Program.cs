@@ -1,5 +1,11 @@
 ﻿using System.Diagnostics.Metrics;
 
+int size = x; // размер (длина) массива
+string[] firstArray = new string[array.Length];
+
+Console.WriteLine("Введите символы, разделенные запятой: "); 
+string symbolFromConsole = Console.ReadLine();
+
 string[] SeparationString(string symbolFromConsole)
 {
     string[] SymbolArray = new string[symbolFromConsole.Length];
@@ -7,17 +13,36 @@ string[] SeparationString(string symbolFromConsole)
     return SymbolArray
 }
 
-string[] HaveThreeSymbolArray(string[] array)
+int HaveThreeAndLessSymbolArray(string[] SerarationString)
 {
     int count = 0;
-    for (int i = 0, i < array.Length; i++)
+    for (int i = 0, i < size; i++)
     {
-        if (array [i].Length <= 3)
+        if (array[i].Length <= 3)
         {
             count ++;
         }
+        else
+        {
+            Console.Write("Элементы, длина которых менее трех симвовлов, отсутствуют.");
+        }
+    
     }
+    return count;
+
 }
 
-Console.Write("Введите символы, разделенные запятой: "); 
-string symbolFromConsole = Console.ReadLine();
+string[] NewThreeAndLessSymbolArray(string[] HaveThreeAndLessSymbolArray);
+    
+{    
+    string[] ThreeOrLessSymbolArray = new string [HaveThreeAndLessSymbolArray(firstArray)];
+    for(int i = 0, k = 0, i < HaveThreeAndLessSymbolArray.Length; i++)
+    {
+        if(array[i].Length <= 3)
+        {
+            ThreeOrLessSymbolArray[k] = array[i];
+            k++;
+        }
+    }
+
+}
